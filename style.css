@@ -1,0 +1,161 @@
+:root {
+  --textcolor: white;
+  --bcboody: #151B1F;
+  --bcboody2: #304153;
+  --colorfb: #1877F2;
+  --colorIn: #0077B5;
+  --bc-content-about: #93969E;
+  --colorIs: radial-gradient(circle at 20% 10%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-image: url(img/pexels-hasan-albari-1229861.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(2px);
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  border-style: 1px groove white;
+  align-content: space-between;
+  margin: 0;
+  gap: 5px;
+  padding: 10px;
+
+}
+
+/* header */
+header {
+  display: flex;
+  flex-wrap: wrap;
+   
+  color: var(--textcolor);
+
+}
+
+header h1,
+h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+
+}
+
+header img {
+  box-shadow: inset 0 0 1em gold;
+  border-radius: 5%;
+  width: 25%;
+  min-width: 250px;
+  box-shadow: 0 0 1em gold;
+}
+
+
+
+aside {
+  opacity: 0.4;
+  background-color: gray;
+  box-shadow: 0 0 0.5em white;
+  transition: 0.5s;
+  width: 100%;
+  order: 1;
+  cursor: pointer;
+
+
+}
+
+aside:hover {
+  transform: translateY(-3px);
+  opacity: 1;
+  box-shadow: 0 0 2em gray;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.content-experience {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  order: 2;
+  margin: 0;
+
+}
+
+.article-1,
+.article-2 {
+  transition: 0.5s;
+  opacity: 0.1;
+  padding: 10px;
+  box-shadow: 0 0 0.5em white;
+  width: 350px;
+  height: 20vh;
+  cursor: pointer;
+
+}
+
+.article-1:hover,
+.article-2:hover {
+  transform: translateY(-3px);
+  opacity: 1;
+  box-shadow: 0 0 2em gray;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.article-1 {
+  order: 1;
+  background-color: white;
+}
+
+.article-2 {
+  background-color: white;
+  order: 2;
+}
+
+footer {
+  margin-left: -25px;
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  order: 3;
+  min-width: 100%;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer li {
+  padding: 20px;
+  list-style: none;
+}
+
+footer i {
+  color: white;
+  font-size: 40px;
+  transform: 0.5s;
+}
+
+.fa-facebook-square:hover {
+  transform: translateY(-3px);
+  color: var(--colorfb);
+}
+
+.fa-instagram:hover {
+  transform: translateY(-3px);
+  background: radial-gradient(circle at 20% 10%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-linkedin:hover {
+  transform: translateY(-3px);
+  color: var(--colorIn);
+}
