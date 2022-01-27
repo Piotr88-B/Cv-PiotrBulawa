@@ -54,19 +54,120 @@ header img {
   min-width: 250px;
   box-shadow: 0 0 1em gold;
 }
-.slider{
+/* logo icon */
+.fa-js{
+  color: #EFD81D;
+}
+.fa-git-square{
+  color:#E84E31;
+}
+.fa-html5{
+  color:#DD4B25;
+}
+.fa-css3-alt{
+  color: #1A6FB4;
+}
+
+.slider {
   display: flex;
   opacity: 1;
-  width:auto;
+  width: 150px;
+  height: auto;
+  overflow: hidden;
+
 }
-.slider i{
+
+.slider input {
+  display: none;
+
+}
+
+aside .fab {
   margin: 10px;
   width: auto;
+  transition: 2s;
   font-size: 150px;
 }
 
+/* Slider Manual */
+.manual-nav {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-left: 30px;
+}
+
+.btn-manual {
+  padding: 5px;
+  cursor: pointer;
+  transition: 1s;
+  border-radius: 50%;
+  border: 1px solid white
+}
+
+.btn-manual:not(:last-child) {
+  margin-right: 10px;
+}
+
+.btn-manual:hover {
+  background-color: white;
+}
+
+#radio1:checked~.fa-git-square {
+  margin-left: 0;
+}
+
+#radio2:checked~.fa-git-square {
+  margin-left: -88%;
+}
+
+#radio3:checked~.fa-git-square {
+  margin-left: -177%;
+}
+
+#radio4:checked~.fa-git-square {
+  margin-left: -266%;
+}
+
+/* auto slider */
+.auto-nav {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  margin-left: 30px;
+
+}
+
+.auto-nav div {
+  padding: 5px;
+  transition: 1s;
+  border-radius: 50%;
+  border: 1px solid white
+}
+
+.auto-nav div:not(:last-child) {
+  margin-right: 10px;
+}
+/* git */
+#radio1:checked ~ .auto-nav .btn1-auto{
+  background: #E84E31;
+}
+/* html */
+#radio2:checked ~ .auto-nav .btn2-auto{
+  background: #DD4B25;
+}
+/* css */
+#radio3:checked ~ .auto-nav .btn3-auto{
+  background: #1A6FB4;
+}
+/* js */
+#radio4:checked ~ .auto-nav .btn4-auto{
+  background: #EFD81D;
+}
+
+
 /* asddasdsd */
-aside {
+.AboutMe {
   opacity: 0.4;
   background-color: gray;
   box-shadow: 0 0 0.5em white;
@@ -78,7 +179,7 @@ aside {
 
 }
 
-aside:hover {
+.AboutMe:hover {
   transform: translateY(-3px);
   opacity: 1;
   box-shadow: 0 0 2em gray;
@@ -145,10 +246,10 @@ footer li {
   list-style: none;
 }
 
-footer i {
+footer .fab {
   color: white;
   font-size: 40px;
-  transform: 0.5s;
+  transform: 0.2s;
 }
 
 .fa-facebook-square:hover {

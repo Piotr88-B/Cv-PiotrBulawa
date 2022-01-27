@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap"
       rel="stylesheet">
-      <script src="https://kit.fontawesome.com/b45334ba2c.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b45334ba2c.js" crossorigin="anonymous"></script>
     <title>PiotrBuława</title>
   </head>
   <div class="page-container">
@@ -21,18 +21,37 @@
         alt="Photo header">
       <h1>Piotr Buława</h1>
       <h2>web developer</h2>
+      <!-- slider  -->
+      <aside class="slider">
+        <input type="radio" name="btn-slider" id="radio1">
+        <input type="radio" name="btn-slider" id="radio2">
+        <input type="radio" name="btn-slider" id="radio3">
+        <input type="radio" name="btn-slider" id="radio4">
+        <i class="fab fa-git-square"></i>
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-js"></i>
 
-       <aside class ="slider">
-         <i class="fab fa-html5"></i>
-         <i class="fab fa-css3-alt"></i>
-         <i class="fab fa-js"></i>
-         <i class="fab fa-git-square"></i>
-       </aside>
+        <!-- automatic navigation -->
+        <div class="auto-nav">
+          <div class="btn1-auto"></div>
+          <div class="btn2-auto"></div>
+          <div class="btn3-auto"></div>
+          <div class="btn4-auto"></div>
+        </div>
+        <!-- Manual slider -->
+        <div class="manual-nav">
+          <label for="radio1" class="btn-manual"></label>
+          <label for="radio2" class="btn-manual"></label>
+          <label for="radio3" class="btn-manual"></label>
+          <label for="radio4" class="btn-manual"></label>
+        </div>
+      </aside>
     </header>
 
     <!-- About -->
-    <aside>
-     o mnie
+    <aside class="AboutMe">
+      o mnie
     </aside>
     <!-- Experience -->
     <div class="content-experience">
@@ -42,13 +61,15 @@
       </article>
     </div>
     <footer>
-     <ul>
-       <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-       <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-       <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-     </ul>
+      <ul>
+        <!-- logo socialmedia -->
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
     </footer>
   </div>
+  <script src="app.js"></script>
   </body>
 
   </html>
