@@ -13,7 +13,6 @@
 }
 
 body {
-  margin: 0;
   background-image: url(img/pexels-hasan-albari-1229861.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -23,12 +22,11 @@ body {
 .page-container {
   display: flex;
   flex-direction: column;
-  width: auto;
   border-style: 1px groove white;
   align-content: space-between;
   margin: 0;
-  gap: 5px;
-  padding: 10px;
+  width: auto;
+  
 
 }
 
@@ -54,17 +52,21 @@ header img {
   min-width: 250px;
   box-shadow: 0 0 1em gold;
 }
+
 /* logo icon */
-.fa-js{
+.fa-js {
   color: #EFD81D;
 }
-.fa-git-square{
-  color:#E84E31;
+
+.fa-git-square {
+  color: #E84E31;
 }
-.fa-html5{
-  color:#DD4B25;
+
+.fa-html5 {
+  color: #DD4B25;
 }
-.fa-css3-alt{
+
+.fa-css3-alt {
   color: #1A6FB4;
 }
 
@@ -148,20 +150,24 @@ aside .fab {
 .auto-nav div:not(:last-child) {
   margin-right: 10px;
 }
+
 /* git */
-#radio1:checked ~ .auto-nav .btn1-auto{
+#radio1:checked~.auto-nav .btn1-auto {
   background: #E84E31;
 }
+
 /* html */
-#radio2:checked ~ .auto-nav .btn2-auto{
+#radio2:checked~.auto-nav .btn2-auto {
   background: #DD4B25;
 }
+
 /* css */
-#radio3:checked ~ .auto-nav .btn3-auto{
+#radio3:checked~.auto-nav .btn3-auto {
   background: #1A6FB4;
 }
+
 /* js */
-#radio4:checked ~ .auto-nav .btn4-auto{
+#radio4:checked~.auto-nav .btn4-auto {
   background: #EFD81D;
 }
 
@@ -185,7 +191,7 @@ aside .fab {
   box-shadow: 0 0 2em gray;
   border-radius: 5px 5px 5px 5px;
 }
-
+/* mein page */
 .content-experience {
   display: flex;
   flex-wrap: wrap;
@@ -194,7 +200,6 @@ aside .fab {
   width: 100%;
   order: 2;
   margin: 0;
-
 }
 
 .article-1,
@@ -206,7 +211,6 @@ aside .fab {
   width: 350px;
   height: 20vh;
   cursor: pointer;
-
 }
 
 .article-1:hover,
@@ -215,18 +219,32 @@ aside .fab {
   opacity: 1;
   box-shadow: 0 0 2em gray;
   border-radius: 5px 5px 5px 5px;
-}
+  background-image: white;
+  }
 
 .article-1 {
   order: 1;
-  background-color: white;
 }
 
 .article-2 {
-  background-color: white;
-  order: 2;
+   background-image: url(./img/1.jpg);
+   opacity: 1;
+   background-size: 150%;
+   background-repeat: no-repeat;
+   order: 2;
+}
+.article-2 table:hover{
+  visibility: visible;
+}
+.article-2 table{
+  visibility: hidden;
+}
+tr{
+  width: 200px;
+
 }
 
+/* footer */
 footer {
   margin-left: -25px;
   display: flex;
