@@ -36,7 +36,6 @@ body {
 header {
   display: flex;
   flex-wrap: wrap;
-   
   color: var(--textcolor);
 
 }
@@ -55,7 +54,16 @@ header img {
   min-width: 250px;
   box-shadow: 0 0 1em gold;
 }
-
+.slider{
+  display: flex;
+  opacity: 1;
+  width:auto;
+}
+.slider i{
+  margin: 10px;
+  width: auto;
+  font-size: 150px;
+}
 
 /* asddasdsd */
 aside {
