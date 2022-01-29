@@ -10,39 +10,38 @@
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
   background-image: url(img/pexels-hasan-albari-1229861.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(7px);
+  background-color: black;
 }
 
 .page-container {
   display: flex;
   flex-direction: column;
   border-style: 1px groove white;
-  align-content: center;
+  /* align-content: center; */
   margin: 0;
   width: auto;
-
-
 }
 
 /* header */
 header {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  gap: 40px;
+  border-bottom: 2px solid white;
+  text-align: center;
   color: var(--textcolor);
-  margin-bottom: 20px;
-  margin: 10px;
+  margin: 0px;
 }
 
 /* image header */
-header img {
+/* header img {
   order: 1;
   border-radius: 3%;
   border: 2px solid black;
@@ -50,25 +49,21 @@ header img {
   width: 25%;
   min-width: 300px;
   box-shadow: 0 0 1em black;
-}
-
-header h1,
-h2 {
-  font-size: 40px;
-  font-family: 'Playfair Display', serif;
-}
+} */
 
 header h1 {
   color: white;
   flex: 2;
+  justify-content: center;
   text-align: center;
+  font-size: 30px;
+  margin: 7rem 1.25rem 2.5rem 1.25rem;
   order: 2;
-
+  word-spacing: 10px;
 }
 
 header p {
   order: 3;
-
 }
 
 
@@ -190,99 +185,89 @@ aside .fab {
 }
 
 
-/* asddasdsd */
+/* About page*/
 .AboutMe {
-  opacity: 0.4;
-  background-color: gray;
-  box-shadow: 0 0 0.5em white;
-  transition: 0.5s;
-  width: 100%;
+  margin-top: 40px;
+  margin: 50px;
+  color: white;
   order: 1;
   cursor: pointer;
-
-
+  font-size: 15px;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  line-height: 30px;
+  word-spacing: 15px;
+  text-align: justify;
 }
+.AboutMe p{
+  text-align: justify;
 
-.AboutMe:hover {
-  transform: translateY(-3px);
-  opacity: 1;
-  box-shadow: 0 0 2em gray;
-  border-radius: 5px 5px 5px 5px;
 }
 
 /* mein page */
 .content-experience {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  gap: 10px;
+  margin-top: 40px;
   order: 2;
-  margin: 0;
+  width: 100%;
 }
 
 .article-1,
 .article-2 {
-  transition: 0.5s;
-  opacity: 0.1;
   padding: 10px;
   box-shadow: 0 0 0.5em white;
-  width: 350px;
-  height: 20vh;
   cursor: pointer;
+  min-width: 30ch;
+  min-height: 45ch;
+  transition: 0.5s;
+  font-size: 15px;
+  color: white;
 }
 
 .article-1:hover,
 .article-2:hover {
   transform: translateY(-3px);
-  opacity: 1;
   box-shadow: 0 0 2em gray;
   border-radius: 5px 5px 5px 5px;
-  background-image: white;
 }
 
 .article-1 {
-  order: 1;
+  background-image: url(./img/marten-bjork-6dW3xyQvcYE-unsplas.png);
+  background-repeat: no-repeat;
+  background-size:120%;
+  flex: 1 1 40%;
+
 }
 
 .article-2 {
   background-image: url(./img/1.jpg);
-  opacity: 1;
-  background-size: 100%;
+  background-size: 120%;
   background-repeat: no-repeat;
-  order: 2;
+  flex: 1 1 40%;
+  height: 100%;
+  line-height: 25px;
 }
 
-.article-2 table:hover {
-  visibility: visible;
-}
 
-.article-2 table {
-  visibility: hidden;
-}
 
-tr {
-  width: 200px;
-
-}
 
 /* footer */
 footer {
-  margin-left: -25px;
   display: flex;
-  text-align: center;
-  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  order: 3;
-  min-width: 100%;
-}
-
-footer ul {
-  display: flex;
+  order: 4;
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 footer li {
-  padding: 20px;
+  margin-right: 40px;
+  padding: 10px;
   list-style: none;
 }
 
@@ -307,4 +292,44 @@ footer .fab {
 .fa-linkedin:hover {
   transform: translateY(-3px);
   color: var(--colorIn);
+}
+
+.fa-github:hover {
+  transform: translateY(-3px);
+  color: black;
+}
+
+/* form contact */
+.contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 15px;
+  order: 3;
+  gap: 20px;
+
+}
+
+#name,
+#email {
+  font-size: 15px;
+  width: 250px;
+  height: 20px;
+  padding-left: 5px;
+}
+
+#mText {
+  font-size: 15px;
+  resize: none;
+  padding-left: 5px;
+  width: 250px;
+  height: 100px;
+  text-decoration: none;
+}
+
+#submit-btn {
+  width: 150px;
+  height: 20px;
+  text-align: center;
 }
