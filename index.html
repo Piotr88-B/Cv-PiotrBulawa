@@ -16,82 +16,63 @@
   <div class="page-container">
     <!-- header CV -->
     <header>
-      <!-- <img
-        src="https://scontent.fktw1-1.fna.fbcdn.net/v/t31.18172-8/19390603_1304360116348446_4580374145792042866_o.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=AM1KANHTK4sAX8ngz5X&_nc_ht=scontent.fktw1-1.fna&oh=00_AT9IpGKkX77QZrKJy9saYhgwrlLMFlfgMi01yRA4M44GKA&oe=62118A0F"
-        alt="Photo header"> -->
       <h1>Piotr Buława</h1>
-      <!-- slider  -->
-      <aside class="slider">
-        <input type="radio" name="btn-slider" id="radio1">
-        <input type="radio" name="btn-slider" id="radio2">
-        <input type="radio" name="btn-slider" id="radio3">
-        <input type="radio" name="btn-slider" id="radio4">
-        <i class="fab fa-git-square"></i>
-        <i class="fab fa-html5"></i>
-        <i class="fab fa-css3-alt"></i>
-        <i class="fab fa-js"></i>
-
-        <!-- automatic navigation -->
-        <div class="auto-nav">
-          <div class="btn1-auto"></div>
-          <div class="btn2-auto"></div>
-          <div class="btn3-auto"></div>
-          <div class="btn4-auto"></div>
-        </div>
-        <!-- Manual slider -->
-        <div class="manual-nav">
-          <label for="radio1" class="btn-manual"></label>
-          <label for="radio2" class="btn-manual"></label>
-          <label for="radio3" class="btn-manual"></label>
-          <label for="radio4" class="btn-manual"></label>
-        </div>
-      </aside>
-
     </header>
-
     <!-- About -->
+    <article class="About Me-container">
     <aside class="AboutMe">
-      <p>Cześć, jestem Piotrek.</p>
-      <p>Większość mojego życia, to pasja do tworzenia czegoś konkretnego,</p>
-      <p>dlatego od około dwuch lat postanowiłem zająć się programowaniem.</p>
-      <p></p>
+      <h3>Cześć, jestem Piotrek.</h3>
+       <p>Większość mojego życia, to pasja do tworzenia czegoś konkretnego,</p>
+       <p>dlatego od około dwóch lat postanowiłem zająć się programowaniem.</p>
     </aside>
+    <!-- slider  -->
+    <aside class="slider">
+      <input type="radio" name="btn-slider" id="radio1">
+      <input type="radio" name="btn-slider" id="radio2">
+      <input type="radio" name="btn-slider" id="radio3">
+      <input type="radio" name="btn-slider" id="radio4">
+      <i class="fab fa-git-square"></i>
+      <i class="fab fa-html5"></i>
+      <i class="fab fa-css3-alt"></i>
+      <i class="fab fa-js"></i>
+      <!-- automatic navigation -->
+      <div class="auto-nav">
+        <div class="btn1-auto"></div>
+        <div class="btn2-auto"></div>
+        <div class="btn3-auto"></div>
+        <div class="btn4-auto"></div>
+      </div>
+      <!-- Manual slider -->
+      <div class="manual-nav">
+        <label for="radio1" class="btn-manual"></label>
+        <label for="radio2" class="btn-manual"></label>
+        <label for="radio3" class="btn-manual"></label>
+        <label for="radio4" class="btn-manual"></label>
+      </div>
+    </aside>
+  </article>
     <!-- Experience -->
     <div class="content-experience">
-      <article class="article-1">
-
+      <article class="art article-1">
+        <h1>Doświadczenie zawodowe</h1>
+        <button>Rozwiń</button>
 
       </article>
-      <article class="article-2">
-        <table>
-          <tr>
-            <td> 2017-2021 </td>
-            <td>
-              <p>Studia inżynierskie na kierunku informatyka</p>
-              <p>inżynierskie na kierunku informatyka w Wyższej</p>
-              <p>Szkole Biznesu oddział w Cieszynie.</p>
-             <p>Specjalizacja: Informatyka przemysłowa</p> 
-              Temat pracy inżynierskiej: Aplikacja mobilna
-              wspomagająca tworzenie transportu w sklepie stacjonarnym</td>
-          </tr>
-          <tr>
-            <td width="80px"> 2004-2008 </td>
-            <td>Zespół Szkół Budowlanych im. gen. St. Maczka
-              w Bielsku-Białej (Technikum).
-            </td>
-          </tr>
-        </table>
+      <article class="art article-2">
+        <h1>Wykształcenie
+          i uzyskane
+          kompetencje</h1>
+        <button>Rozwiń</button>
       </article>
     </div>
-     <footer>
-    <form class="contact">
-      <input type="text" id="name" name="text" placeholder="Enter your Name">
-      <input type="email" id="email" name="emial" placeholder="Enter a valid email address">
-       <textarea id="mText" name="mText" placeholder="Enter your massage"></textarea>
-     
-       <button id="submit-btn">Submit</button>
-    </form>
-   
+    <footer>
+      <form class="contact" method="get">
+        <input type="text" id="name" name="text" placeholder="Enter your Name" required>
+        <input type="email" id="email" name="emial" placeholder="Enter a valid email address" required>
+        <textarea id="mText" name="mText" placeholder="Enter your massage" required></textarea>
+
+        <button id="submit-btn" type="submit">Contact Me</button>
+      </form>
       <ul>
         <!-- logo socialmedia -->
         <li><a href="#"><i class="fab fa-instagram"></i></a></li>

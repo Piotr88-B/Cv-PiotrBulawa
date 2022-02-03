@@ -2,6 +2,7 @@
   --textcolor: white;
   --bcboody: #151B1F;
   --bcboody2: #304153;
+  --bgboody3: #141414;
   --colorfb: #1877F2;
   --colorIn: #0077B5;
   --bc-content-about: #93969E;
@@ -11,84 +12,72 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+
 }
 
 body {
-  background-image: url(img/pexels-hasan-albari-1229861.jpg);
+  /* background-image: url(img/pexels-hasan-albari-1229861.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
-  backdrop-filter: blur(7px);
-  background-color: black;
+  backdrop-filter: blur(3px);
 }
 
+/* 1 -Page main */
 .page-container {
   display: flex;
   flex-direction: column;
   border-style: 1px groove white;
-  /* align-content: center; */
-  margin: 0;
-  width: auto;
 }
 
-/* header */
+/*1.2 - header */
 header {
   display: flex;
-  flex-flow: row wrap;
   border-bottom: 2px solid white;
   text-align: center;
-  color: var(--textcolor);
+  justify-content: center;
   margin: 0px;
+  order: 1;
 }
 
-/* image header */
-/* header img {
-  order: 1;
-  border-radius: 3%;
-  border: 2px solid black;
-  flex: 0.3;
-  width: 25%;
-  min-width: 300px;
-  box-shadow: 0 0 1em black;
-} */
-
+/* 1.2.1 - header text  */
 header h1 {
-  color: white;
-  flex: 2;
-  justify-content: center;
-  text-align: center;
+  color: black;
   font-size: 30px;
-  margin: 7rem 1.25rem 2.5rem 1.25rem;
-  order: 2;
+  margin: 2rem 1.25rem 2.5rem 1.25rem;
   word-spacing: 10px;
 }
 
-header p {
-  order: 3;
+/* 2 - About */
+.About {
+  display: flex;
+  order: 2;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+  gap: 1rem;
+  width: 100%;
+  background-color: #111930;
 }
 
-
-
-/* slider icon */
-.fa-js {
-  color: #EFD81D;
+/* 2.1 - About page*/
+.AboutMe {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  order: 1;
+  font-size: 15px;
+  line-height: 30px;
 }
 
-.fa-git-square {
-  color: #E84E31;
-}
-
-.fa-html5 {
-  color: #DD4B25;
-}
-
-.fa-css3-alt {
-  color: #1A6FB4;
-}
+/* 2.2 - slider */
 
 .slider {
   display: flex;
   opacity: 1;
-  order: 4;
+  order: 2;
+  position: relative;
   width: 150px;
   overflow: hidden;
 }
@@ -150,7 +139,6 @@ aside .fab {
   position: absolute;
   justify-content: center;
   margin-left: 30px;
-
 }
 
 .auto-nav div {
@@ -162,6 +150,23 @@ aside .fab {
 
 .auto-nav div:not(:last-child) {
   margin-right: 10px;
+}
+
+/* slider icon */
+.fa-js {
+  color: #EFD81D;
+}
+
+.fa-git-square {
+  color: #E84E31;
+}
+
+.fa-html5 {
+  color: #DD4B25;
+}
+
+.fa-css3-alt {
+  color: #1A6FB4;
 }
 
 /* git */
@@ -184,73 +189,71 @@ aside .fab {
   background: #EFD81D;
 }
 
-
-/* About page*/
-.AboutMe {
-  margin-top: 40px;
-  margin: 50px;
-  color: white;
-  order: 1;
-  cursor: pointer;
-  font-size: 15px;
-  font-family: 'Arial Narrow Bold', sans-serif;
-  line-height: 30px;
-  word-spacing: 15px;
-  text-align: justify;
-}
-.AboutMe p{
-  text-align: justify;
-
-}
-
-/* mein page */
+/*3. mein page */
 .content-experience {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 40px;
-  order: 2;
-  width: 100%;
+  order: 3;
 }
 
+/* 3.1 - articul page skill/school */
 .article-1,
 .article-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
-  box-shadow: 0 0 0.5em white;
   cursor: pointer;
-  min-width: 30ch;
+  min-width: 40ch;
   min-height: 45ch;
-  transition: 0.5s;
+  transition: 0.3s;
   font-size: 15px;
-  color: white;
+  width: 100%;
 }
 
 .article-1:hover,
 .article-2:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 2em gray;
-  border-radius: 5px 5px 5px 5px;
+  background-size: 130%;
 }
 
 .article-1 {
+  color: orange;
   background-image: url(./img/marten-bjork-6dW3xyQvcYE-unsplas.png);
   background-repeat: no-repeat;
-  background-size:120%;
+  background-size: 120%;
   flex: 1 1 40%;
+}
 
+.article-1 button:hover {
+  background-color: orange;
+}
+
+
+.art button {
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  background: none;
+  border-radius: 30px;
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+.article-2 button:hover {
+  background-color: white;
 }
 
 .article-2 {
+  color: white;
   background-image: url(./img/1.jpg);
   background-size: 120%;
   background-repeat: no-repeat;
   flex: 1 1 40%;
-  height: 100%;
   line-height: 25px;
 }
-
-
-
 
 /* footer */
 footer {
@@ -262,7 +265,7 @@ footer {
   width: 100%;
   height: auto;
   margin-bottom: 50px;
-  margin-top: 50px;
+  background-color: #111930;
 }
 
 footer li {
@@ -272,7 +275,7 @@ footer li {
 }
 
 footer .fab {
-  color: white;
+  color: orange;
   font-size: 40px;
   transform: 0.2s;
 }
@@ -306,13 +309,14 @@ footer .fab {
   flex-wrap: wrap;
   align-items: center;
   margin-top: 15px;
+  margin-bottom: 2rem;
   order: 3;
   gap: 20px;
-
 }
 
 #name,
 #email {
+  border-style: none;
   font-size: 15px;
   width: 250px;
   height: 20px;
@@ -330,6 +334,7 @@ footer .fab {
 
 #submit-btn {
   width: 150px;
-  height: 20px;
+  height: 30px;
   text-align: center;
+  background-color: yellow;
 }
