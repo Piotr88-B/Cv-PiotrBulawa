@@ -13,46 +13,58 @@
     <script src="https://kit.fontawesome.com/b45334ba2c.js" crossorigin="anonymous"></script>
     <title>PiotrBuława</title>
   </head>
-  <div class="page-container">
-    <!-- header CV -->
-    <header>
+  <!-- header CV -->
+  <nav class="nav-menu">
+    <div class="header-h1">
       <h1>Piotr Buława</h1>
-    </header>
+    </div>
+    <div class="openMenu"><i class="fa fa-bars"></i>
+    </div>
+    <ul class="ul-menu">
+      <li><a href="#1" class="linkNav">O mnie</a></li>
+      <li><a href="#2" class="linkNav">Doświadczenie</a></li>
+      <li><a href="#3" class="linkNav">Projekty</a></li>
+      <li><a href="#4" class="linkNav">Kontakt</a></li>
+      <div class="closMenu"><i class="fa fa-times"></i></div>
+    </ul>
+  </nav>
+  <div class="page-container">
+
     <!-- About -->
     <article class="About Me-container">
-    <aside class="AboutMe">
-      <h3>Cześć, jestem Piotrek.</h3>
-       <p>Większość mojego życia, to pasja do tworzenia czegoś konkretnego,</p>
-       <p>dlatego od około dwóch lat postanowiłem zająć się programowaniem.</p>
-    </aside>
-    <!-- slider  -->
-    <aside class="slider">
-      <input type="radio" name="btn-slider" id="radio1">
-      <input type="radio" name="btn-slider" id="radio2">
-      <input type="radio" name="btn-slider" id="radio3">
-      <input type="radio" name="btn-slider" id="radio4">
-      <i class="fab fa-git-square"></i>
-      <i class="fab fa-html5"></i>
-      <i class="fab fa-css3-alt"></i>
-      <i class="fab fa-js"></i>
-      <!-- automatic navigation -->
-      <div class="auto-nav">
-        <div class="btn1-auto"></div>
-        <div class="btn2-auto"></div>
-        <div class="btn3-auto"></div>
-        <div class="btn4-auto"></div>
-      </div>
-      <!-- Manual slider -->
-      <div class="manual-nav">
-        <label for="radio1" class="btn-manual"></label>
-        <label for="radio2" class="btn-manual"></label>
-        <label for="radio3" class="btn-manual"></label>
-        <label for="radio4" class="btn-manual"></label>
-      </div>
-    </aside>
-  </article>
+      <aside class="AboutMe" id="1">
+        <h3>Cześć, jestem Piotrek.</h3>
+        <p>Większość mojego życia, to pasja do tworzenia czegoś konkretnego,
+          dlatego od około dwóch lat postanowiłem zająć się programowaniem.</p>
+      </aside>
+      <!-- slider  -->
+      <aside class="slider">
+        <input type="radio" name="btn-slider" id="radio1">
+        <input type="radio" name="btn-slider" id="radio2">
+        <input type="radio" name="btn-slider" id="radio3">
+        <input type="radio" name="btn-slider" id="radio4">
+        <i class="fab fa-git-square"></i>
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-js"></i>
+        <!-- automatic navigation -->
+        <div class="auto-nav">
+          <div class="btn1-auto"></div>
+          <div class="btn2-auto"></div>
+          <div class="btn3-auto"></div>
+          <div class="btn4-auto"></div>
+        </div>
+        <!-- Manual slider -->
+        <div class="manual-nav">
+          <label for="radio1" class="btn-manual"></label>
+          <label for="radio2" class="btn-manual"></label>
+          <label for="radio3" class="btn-manual"></label>
+          <label for="radio4" class="btn-manual"></label>
+        </div>
+      </aside>
+    </article>
     <!-- Experience -->
-    <div class="content-experience">
+    <div class="content-experience" id="2">
       <article class="art article-1">
         <h1>Doświadczenie zawodowe</h1>
         <button>Rozwiń</button>
@@ -66,7 +78,7 @@
       </article>
     </div>
     <footer>
-      <form class="contact" method="get">
+      <form class="contact" method="get" id="4">
         <input type="text" id="name" name="text" placeholder="Enter your Name" required>
         <input type="email" id="email" name="emial" placeholder="Enter a valid email address" required>
         <textarea id="mText" name="mText" placeholder="Enter your massage" required></textarea>
