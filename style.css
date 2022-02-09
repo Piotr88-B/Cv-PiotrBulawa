@@ -154,6 +154,17 @@ nav .ul-menu .closMenu {
     margin-bottom: 10rem;
   }
 
+  /* mobile skill */
+
+
+  /* .container-skill{
+  display: flex;
+  flex-direction:column;
+  width: 100%;
+  justify-content: space-between;
+} */
+
+
 }
 
 
@@ -313,23 +324,88 @@ aside .fab {
 
 /*3. mein page */
 .content-experience {
+
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   order: 2;
+  padding: 15px;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container-skill {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
   order: 1;
-  height: 50vh;
-  background-color: #1877F2;
+  min-width: 40%;
 }
 
+/* skill */
+.templeSkill {
+  flex-basis: 150px;
+  height: 200px;
+  color: #141414;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* circle inside */
+.templeSkill .circle-inside {
+  border: 5px solid blue;
+  border-radius: 50%;
+  color: black;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  height: 150px;
+}
+
+.templeSkill .circle-inside .box,
+.templeSkill .circle-inside .box span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.templeSkill .circle-inside .box {
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.templeSkill .circle-inside:hover .box{
+transform: translate(-50%, -50%);
+}
+.templeSkill .circle-inside .box span {
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+
+
+
+
+
+
+/* 3 */
 .container-art {
   display: flex;
+  flex-wrap: wrap;
+  min-width: 60%;
   order: 2;
-  height: 50vh;
+  gap: 10px;
 }
 
 /* 3.1 - articul page skill/school */
@@ -339,10 +415,10 @@ aside .fab {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   cursor: pointer;
   transition: 0.3s;
   font-size: 15px;
+  border: 1px solid black;
   min-height: 50vh;
   min-width: 50vh;
   flex: 1 1 40%
@@ -351,15 +427,14 @@ aside .fab {
 /* 3.2 - hover img artic */
 .article-1:hover,
 .article-2:hover {
-  background-size: 120%;
+  background-size: 160%;
 }
 
 .article-1 {
   color: orange;
   background-image: url(./img/marten-bjork-6dW3xyQvcYE-unsplas.png);
   background-repeat: no-repeat;
-  background-size: 110%;
-
+  background-size: 150%;
   order: 1;
 }
 
@@ -370,7 +445,7 @@ aside .fab {
 .article-2 {
   color: white;
   background-image: url(./img/1.jpg);
-  background-size: 110%;
+  background-size: 150%;
   background-repeat: no-repeat;
   /* flex: 1 1 40%; */
   order: 2;
