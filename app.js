@@ -55,104 +55,116 @@ selectLink.forEach(e => e.addEventListener('click', () => {
 
 let skillObject = [{
     class: 'templeSkill',
-    div2: 'circle-inside',
+    div2: 'circle-inside html',
     divBar: 'bar',
     divBox: 'box',
     name: 'html',
     valueText: '75%',
-    //  value: 0.75,
-    //    startAngle: -1.55,
-    //    fill: {
-    //      color: red
-    //    }
+    value: 0.75,
+    startAngle: -1.55,
+    size: 150,
+    fill: {
+      color: 'red'
+    }
 
   },
   {
     class: 'templeSkill',
-    div2: 'circle-inside',
+    div2: 'circle-inside css',
     divBar: 'bar',
     divBox: 'box',
     name: 'css',
     valueText: '75%',
-    //  value: 0.75,
-    //    startAngle: -1.55,
-    //    fill: {
-    //      color: red
-    //    }
+    value: 0.75,
+    startAngle: -1.55,
+    size: 150,
+    fill: {
+      color: 'red'
+    }
   },
   {
     class: 'templeSkill',
-    div2: 'circle-inside',
+    div2: 'circle-inside js',
     divBar: 'bar',
     divBox: 'box',
     name: 'JavaScript',
     valueText: '60%',
-    //  value: 0.6,
-    //    startAngle: -1.55,
-    //    fill: {
-    //      color: red
-    //    }
+    value: 0.6,
+    startAngle: -1.55,
+    size: 150,
+    fill: {
+      color: 'red'
+    }
   },
   {
     class: 'templeSkill',
-    div2: 'circle-inside',
+    div2: 'circle-inside java',
     divBar: 'bar',
     divBox: 'box',
     name: 'Java',
-    valueText: '40%', 
-    // value: 0.4,
-    //   startAngle: -1.55,
-    //   fill: {
-    //     color: red
-    //   }
+    valueText: '40%',
+    value: 0.2,
+    startAngle: -1.55,
+    size: 150,
+    fill: {
+      color: 'red'
+    }
   },
   {
     class: 'templeSkill',
-    div2: 'circle-inside',
+    div2: 'circle-inside git',
     divBar: 'bar',
     divBox: 'box',
     name: 'Git',
-    valueText: '20%', 
-    // value: 0.2,
-    //   startAngle: -1.55,
-    //   fill: {
-    //     color: red
-    //   }
+    valueText: '20%',
+    value: 0.2,
+    startAngle: -1.55,
+    size: 150,
+    fill: {
+      color: 'red'
+    }
   },
   {
     class: 'templeSkill',
-    div2: 'circle-inside',
+    div2: 'circle-inside vsc',
     divBar: 'bar',
     divBox: 'box',
     name: 'Visual Studio Code',
     valueText: '60%',
-    //  value: 0.6,
-    //    startAngle: -1.55,
-    //    fill: {
-    //      color: red
-    //    }
+    value: 0.6,
+    startAngle: -1.55,
+    size: 150,
+    fill: {
+      color: 'red'
+    }
   },
   {
     class: 'templeSkill',
-    div2: 'circle-inside',
+    div2: 'circle-inside as',
     divBar: 'bar',
     divBox: 'box',
     name: 'Android Studio',
     valueText: '20%',
-    // value: 0.2,
-    // startAngle: -1.55,
-    // fill: {
-    //   color: red
-    // }
+    value: 0.2,
+    startAngle: -1.55,
+    size: 150,
+    fill: {
+      color: 'red'
+    }
   },
   {
     class: 'templeSkill',
-    div2: 'circle-inside',
+    div2: 'circle-inside ja',
     divBar: 'bar',
     divBox: 'box',
     name: 'Język Angielski',
-    valueText: '50%',
-
+    valueText: '45%',
+    value: 0.45,
+    startAngle: -1.55,
+    size: 150,
+    fill: {
+      color: 'red'
+    }
   },
 ];
 
@@ -176,20 +188,17 @@ for (let i = 0; i < skillObject.length; i++) {
   createDivBox.append(createSpan)
 }
 
-// life in progress skill
-let setting = {
-    value: 0.5,
-    startAngle: -1.55,
-    size:150,
-    fill: {
-      color: 'red'
-    }
-}
+ let selectAllCircele = document.querySelectorAll('.circle-inside', '.bar')
 
-$('.circle-inside .bar').circleProgress(setting).on('circle-animation-progress'),
-function(event, progress,stepValue){
+for (let i = 0; i < skillObject.length; i++) {
+ 
+  $(selectAllCircele[i]).circleProgress(skillObject[i]).on('circle-animation-progress',
+    function (event, progress, stepValue) {
+      $(this).parent().find('span').text(String(stepValue.toFixed(2).substr(2)+"%"))
+    }); 
 
 }
+
 
 //use function
 //use function change div
@@ -198,3 +207,4 @@ selectArt.addEventListener('mouseleave', hiddenDiv)
 //use function displaying the menu
 selectOpenMenu.addEventListener('click', showFunction);
 selectclosMenu.addEventListener('click', closeFunction);
+

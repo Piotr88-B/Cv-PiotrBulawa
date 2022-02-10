@@ -357,7 +357,7 @@ aside .fab {
 
 /* circle inside */
 .templeSkill .circle-inside {
-  border: 5px solid blue;
+
   border-radius: 50%;
   color: black;
   position: absolute;
