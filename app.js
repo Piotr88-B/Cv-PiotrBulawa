@@ -12,6 +12,8 @@ const selectLink = selectUlMenu.querySelectorAll('.linkNav')
 //select div create new div for skill
 const selectDivSkill = document.querySelector('.container-skill')
 
+
+
 //variable
 // variable for slider
 let chan = 1;
@@ -54,7 +56,7 @@ selectLink.forEach(e => e.addEventListener('click', () => {
 // create object
 
 let skillObject = [{
-    class: 'templeSkill',
+    class: 'templeSkill fade-in',
     div2: 'circle-inside html',
     divBar: 'bar',
     divBox: 'box',
@@ -64,12 +66,12 @@ let skillObject = [{
     startAngle: -1.55,
     size: 150,
     fill: {
-      color: 'red'
+      color: '#111930'
     }
 
   },
   {
-    class: 'templeSkill',
+    class: 'templeSkill fade-in',
     div2: 'circle-inside css',
     divBar: 'bar',
     divBox: 'box',
@@ -79,11 +81,11 @@ let skillObject = [{
     startAngle: -1.55,
     size: 150,
     fill: {
-      color: 'red'
+      color: '#111930'
     }
   },
   {
-    class: 'templeSkill',
+    class: 'templeSkill fade-in',
     div2: 'circle-inside js',
     divBar: 'bar',
     divBox: 'box',
@@ -93,11 +95,11 @@ let skillObject = [{
     startAngle: -1.55,
     size: 150,
     fill: {
-      color: 'red'
+      color: '#111930'
     }
   },
   {
-    class: 'templeSkill',
+    class: 'templeSkill fade-in',
     div2: 'circle-inside java',
     divBar: 'bar',
     divBox: 'box',
@@ -107,11 +109,11 @@ let skillObject = [{
     startAngle: -1.55,
     size: 150,
     fill: {
-      color: 'red'
+      color: '#111930'
     }
   },
   {
-    class: 'templeSkill',
+    class: 'templeSkill fade-in',
     div2: 'circle-inside git',
     divBar: 'bar',
     divBox: 'box',
@@ -121,11 +123,11 @@ let skillObject = [{
     startAngle: -1.55,
     size: 150,
     fill: {
-      color: 'red'
+      color: '#111930'
     }
   },
   {
-    class: 'templeSkill',
+    class: 'templeSkill fade-in',
     div2: 'circle-inside vsc',
     divBar: 'bar',
     divBox: 'box',
@@ -135,11 +137,11 @@ let skillObject = [{
     startAngle: -1.55,
     size: 150,
     fill: {
-      color: 'red'
+      color: '#111930'
     }
   },
   {
-    class: 'templeSkill',
+    class: 'templeSkill fade-in',
     div2: 'circle-inside as',
     divBar: 'bar',
     divBox: 'box',
@@ -149,11 +151,11 @@ let skillObject = [{
     startAngle: -1.55,
     size: 150,
     fill: {
-      color: 'red'
+      color: '#111930'
     }
   },
   {
-    class: 'templeSkill',
+    class: 'templeSkill fade-in',
     div2: 'circle-inside ja',
     divBar: 'bar',
     divBox: 'box',
@@ -163,7 +165,7 @@ let skillObject = [{
     startAngle: -1.55,
     size: 150,
     fill: {
-      color: 'red'
+      color: '#111930'
     }
   },
 ];
@@ -187,8 +189,7 @@ for (let i = 0; i < skillObject.length; i++) {
   createDiv2.append(createDivBar, createDivBox)
   createDivBox.append(createSpan)
 }
-
- let selectAllCircele = document.querySelectorAll('.circle-inside', '.bar')
+const selectAllCircele = document.querySelectorAll('.circle-inside', '.bar')
 
 for (let i = 0; i < skillObject.length; i++) {
  
@@ -198,7 +199,31 @@ for (let i = 0; i < skillObject.length; i++) {
     }); 
 
 }
+// scroll function
+const selectFaders = document.querySelectorAll('.fade-in')
+const settup ={
+threshold: 1,
+rootMargin: "0px 0px -200px 0px"
+}
 
+const aOnScroll = new IntersectionObserver(function(
+  entries,
+  aOnScroll
+){
+  entries.forEach(entry =>{
+    if(!entry.isIntersecting){
+      return;
+    }else{
+   entry.target.classList.add('appear');
+      aOnScroll.unobserve(entry.target)
+    }
+  })
+}, 
+settup);
+
+selectFaders.forEach(fader => {
+  aOnScroll.observe(fader)
+});
 
 //use function
 //use function change div

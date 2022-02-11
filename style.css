@@ -324,7 +324,6 @@ aside .fab {
 
 /*3. mein page */
 .content-experience {
-
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -332,6 +331,7 @@ aside .fab {
   padding: 15px;
   align-items: center;
   min-height: 100vh;
+
 }
 
 .container-skill {
@@ -342,7 +342,7 @@ aside .fab {
   padding: 10px;
   align-items: center;
   order: 1;
-  min-width: 40%;
+  min-width: 58%;
 }
 
 /* skill */
@@ -354,6 +354,16 @@ aside .fab {
   justify-content: center;
   position: relative;
 }
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
 
 /* circle inside */
 .templeSkill .circle-inside {
@@ -383,9 +393,11 @@ aside .fab {
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
-.templeSkill .circle-inside:hover .box{
-transform: translate(-50%, -50%);
+
+.templeSkill .circle-inside:hover .box {
+  transform: translate(-50%, -50%);
 }
+
 .templeSkill .circle-inside .box span {
   transform: translate(-50%, -50%);
   font-size: 20px;
