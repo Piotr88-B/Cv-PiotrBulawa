@@ -191,19 +191,23 @@ for (let i = 0; i < skillObject.length; i++) {
 }
 const selectAllCircele = document.querySelectorAll('.circle-inside', '.bar')
 
-for (let i = 0; i < skillObject.length; i++) {
- 
-  $(selectAllCircele[i]).circleProgress(skillObject[i]).on('circle-animation-progress',
-    function (event, progress, stepValue) {
-      $(this).parent().find('span').text(String(stepValue.toFixed(2).substr(2)+"%"))
-    }); 
 
-}
-// scroll function
+
+
 const selectFaders = document.querySelectorAll('.fade-in')
 const settup ={
-threshold: 1,
-rootMargin: "0px 0px -200px 0px"
+threshold: 0,
+rootMargin: "0px 0px -50px 0px"
+}
+
+
+const functionScrol = () => {
+  for (let i = 0; i < skillObject.length; i++) {
+    $(selectAllCircele[i]).circleProgress(skillObject[i]).on('circle-animation-progress',
+      function (event, progress, stepValue) {
+        $(this).parent().find('span').text(String(stepValue.toFixed(2).substr(2) + "%"))
+      });
+  }
 }
 
 const aOnScroll = new IntersectionObserver(function(
@@ -216,6 +220,7 @@ const aOnScroll = new IntersectionObserver(function(
     }else{
    entry.target.classList.add('appear');
       aOnScroll.unobserve(entry.target)
+      functionScrol()
     }
   })
 }, 
@@ -224,6 +229,9 @@ settup);
 selectFaders.forEach(fader => {
   aOnScroll.observe(fader)
 });
+
+
+
 
 //use function
 //use function change div

@@ -21,7 +21,6 @@
 }
 
 body {
-  /* background-image: url(img/pexels-hasan-albari-1229861.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   backdrop-filter: blur(3px);
@@ -31,7 +30,6 @@ body {
 .page-container {
   display: flex;
   flex-direction: column;
-  border-style: 1px groove white;
 }
 
 /*  1- menu */
@@ -85,98 +83,14 @@ nav .ul-menu .closMenu {
   cursor: pointer;
 }
 
-@media(max-width: 650px) {
-
-  nav {
-    height: 60px;
-  }
-
-  nav .ul-menu {
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    transition: top 2s ease;
-    background-color: var(--bgHamburger);
-    display: none;
-    color: white;
-    margin-top: -15px;
-  }
-
-  nav .ul-menu .closMenu {
-    display: block;
-    position: absolute;
-    top: 10px;
-    font-size: 60px;
-    right: 30px;
-
-  }
-
-  nav .openMenu {
-    display: block;
-    font-size: 50px;
-    padding: 5px;
-    margin: 0;
-
-
-  }
-
-  nav .ul-menu li a {
-    width: 100%;
-    color: var(--bgHamburger);
-    background-color: var(--bgHamburger);
-    font-size: 40px;
-    color: white;
-  }
-
-  nav .ul-menu li a:hover {
-    background: white;
-    color: var(--bgHamburger);
-  }
-
-  /* mobile About */
-  .AboutMe {
-    margin-top: 20%;
-    margin-bottom: 50%;
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-
-  .About p {
-    font-size: 12px;
-  }
-
-  .slider {
-    margin-bottom: 10rem;
-  }
-
-  /* mobile skill */
-
-
-  /* .container-skill{
-  display: flex;
-  flex-direction:column;
-  width: 100%;
-  justify-content: space-between;
-} */
-
-
-}
-
-
-
-/* 2 - About */
-.About {
+/* 2 - About main container */
+.about {
   display: flex;
   order: 1;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  padding: 20px;
   gap: 1rem;
   width: 100%;
   height: 100vh;
@@ -186,22 +100,41 @@ nav .ul-menu .closMenu {
 }
 
 
-/* 2.1 - About page*/
-.AboutMe {
+/* 2.1 - About page container*/
+.aboutMe {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   color: white;
+  padding: 15px;
   order: 1;
-  max-width: 450px;
-  font-size: 15px;
-  line-height: 2rem;
+  align-items: center;
+  gap: 40px;
 }
 
-.About p {
+.about-text {
+  font-size: 15px;
+  line-height: 2rem;
+  max-width: 450px;
+}
+
+.about-text h3 {
+  line-height: 5rem;
+}
+
+.about p {
   text-align: justify;
 }
 
+.readMe-container {
+  order: 3;
+  text-decoration: none;
+}
 
+.readMe-container a {
+  text-decoration: none;
+  color: orange;
+}
 
 /* 2.2 - slider */
 
@@ -326,27 +259,30 @@ aside .fab {
 .content-experience {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex-wrap: wrap;
   order: 2;
-  padding: 15px;
   align-items: center;
   min-height: 100vh;
-
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--fontText);
 }
 
 .container-skill {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 10px;
+  justify-content: center;
   align-items: center;
   order: 1;
-  min-width: 58%;
+  gap: 15px;
+  width: 100%;
 }
 
 /* skill */
 .templeSkill {
+  margin: 0;
   flex-basis: 150px;
   height: 200px;
   color: #141414;
@@ -364,10 +300,8 @@ aside .fab {
   opacity: 1;
 }
 
-
 /* circle inside */
 .templeSkill .circle-inside {
-
   border-radius: 50%;
   color: black;
   position: absolute;
@@ -402,14 +336,7 @@ aside .fab {
   transform: translate(-50%, -50%);
   font-size: 20px;
   font-weight: 600;
-  font-family: sans-serif;
 }
-
-
-
-
-
-
 
 /* 3 */
 .container-art {
@@ -430,7 +357,6 @@ aside .fab {
   cursor: pointer;
   transition: 0.3s;
   font-size: 15px;
-  border: 1px solid black;
   min-height: 50vh;
   min-width: 50vh;
   flex: 1 1 40%
@@ -563,4 +489,83 @@ footer .fab {
   height: 30px;
   text-align: center;
   background-color: yellow;
+}
+
+@media(max-width: 650px) {
+
+  nav {
+    height: 60px;
+  }
+
+  nav .ul-menu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    transition: top 2s ease;
+    background-color: var(--bgHamburger);
+    display: none;
+    color: white;
+    margin-top: -15px;
+  }
+
+  nav .ul-menu .closMenu {
+    display: block;
+    position: absolute;
+    top: 10px;
+    font-size: 60px;
+    right: 30px;
+
+  }
+
+  nav .openMenu {
+    display: block;
+    font-size: 50px;
+    padding: 5px;
+    margin: 0;
+
+
+  }
+
+  nav .ul-menu li a {
+    width: 100%;
+    color: var(--bgHamburger);
+    background-color: var(--bgHamburger);
+    font-size: 40px;
+    color: white;
+  }
+
+  nav .ul-menu li a:hover {
+    background: white;
+    color: var(--bgHamburger);
+  }
+
+  /* mobile About */
+  .AboutMe {
+    margin-top: 20%;
+    margin-bottom: 50%;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .About p {
+    font-size: 12px;
+  }
+
+  .slider {
+    margin-bottom: 1rem;
+    border-right: none;
+  }
+
+  .about-text {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 2rem;
+
+  }
+
 }
