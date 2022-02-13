@@ -14,97 +14,108 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
   </head>
-  <!-- header CV -->
-  <nav class="nav-menu">
-    <div class="header-h1">
-      <h1>Piotr Buława</h1>
-    </div>
-    <div class="openMenu"><i class="fa fa-bars"></i>
-    </div>
-    <ul class="ul-menu">
-      <li><a href="#1" class="linkNav">O mnie</a></li>
-      <li><a href="#2" class="linkNav">Doświadczenie</a></li>
-      <li><a href="#3" class="linkNav">Projekty</a></li>
-      <li><a href="#4" class="linkNav">Kontakt</a></li>
-      <div class="closMenu"><i class="fa fa-times"></i></div>
-    </ul>
-  </nav>
-  <div class="page-container">
 
-    <!-- About -->
-    <article class="about Me-container" id="1">
-      <aside class="aboutMe">
-        <div class = "about-text">
-          <h3>Cześć, jestem Piotrek.</h3>
-          <p>Większość mojego życia, to pasja do tworzenia czegoś konkretnego,
-            dlatego od około dwóch lat postanowiłem zająć się programowaniem.</p>
-        </div> 
-        <aside class="slider">
-          <input type="radio" name="btn-slider" id="radio1">
-          <input type="radio" name="btn-slider" id="radio2">
-          <input type="radio" name="btn-slider" id="radio3">
-          <input type="radio" name="btn-slider" id="radio4">
-          <i class="fab fa-git-square"></i>
-          <i class="fab fa-html5"></i>
-          <i class="fab fa-css3-alt"></i>
-          <i class="fab fa-js"></i>
-          <!-- automatic navigation -->
-          <div class="auto-nav">
-            <div class="btn1-auto"></div>
-            <div class="btn2-auto"></div>
-            <div class="btn3-auto"></div>
-            <div class="btn4-auto"></div>
-          </div>
-          <!-- Manual slider -->
-          <div class="manual-nav">
-            <label for="radio1" class="btn-manual"></label>
-            <label for="radio2" class="btn-manual"></label>
-            <label for="radio3" class="btn-manual"></label>
-            <label for="radio4" class="btn-manual"></label>
-          </div>
-        </aside>
-      </aside>
-      <div class="readMe-container">
-        <a href="#2">Przejdz Dalej</a></div>
-    </article>
-
-    <!-- Experience -->
-    <div class="content-experience" id="2">
-      <section class="container-exp-h1" >
-       
-      </section>
-      <section class="container-skill">
-      </section>
-      <div class="container-art">
-        <article class="art article-1">
-          <h1>Doświadczenie zawodowe</h1>
-          <button>Rozwiń</button>
-        </article>
-        <article class="art article-2">
-          <h1>Wykształcenie
-          </h1>
-          <button>Rozwiń</button>
-        </article>
+  <body>
+    <!-- header CV -->
+    <header>
+    <nav class="nav-menu">
+      <div class="header-h1">
+        <h1>Piotr Buława</h1>
       </div>
-    </div>
-    <footer>
-      <form class="contact" method="get" id="4">
-        <input type="text" id="name" name="text" placeholder="Enter your Name" required>
-        <input type="email" id="email" name="emial" placeholder="Enter a valid email address" required>
-        <textarea id="mText" name="mText" placeholder="Enter your massage" required></textarea>
-        <button id="submit-btn" type="submit">Contact Me</button>
-      </form>
-      <ul>
-        <!-- logo socialmedia -->
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=100003234103680"><i class="fab fa-facebook-square"></i></a>
-        </li>
-        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="https://github.com/Piotr88-B"><i class="fab fa-github"></i></a></li>
+      <div class="openMenu"><i class="fa fa-bars"></i>
+      </div>
+      <ul class="ul-menu">
+        <li><a href="#1" class="linkNav">O mnie</a></li>
+        <li><a href="#2" class="linkNav">Doświadczenie</a></li>
+        <li><a href="#3" class="linkNav">Projekty</a></li>
+        <li><a href="#4" class="linkNav">Kontakt</a></li>
+        <div class="closMenu"><i class="fa fa-times"></i></div>
       </ul>
-    </footer>
-  </div>
-  <script src="app.js"></script>
+    </nav>
+    </header>
+    <div class="page-container">
+
+      <!-- About -->
+      <article class="about Me-container" id="1">
+        <aside class="aboutMe">
+          <div class="about-text">
+            <h3>Cześć, jestem Piotrek.</h3>
+            <p>Większość mojego życia, to pasja do tworzenia czegoś konkretnego,
+              dlatego od około dwóch lat postanowiłem zająć się programowaniem.</p>
+          </div>
+          <aside class="slider">
+            <input type="radio" name="btn-slider" id="radio1">
+            <input type="radio" name="btn-slider" id="radio2">
+            <input type="radio" name="btn-slider" id="radio3">
+            <input type="radio" name="btn-slider" id="radio4">
+            <i class="fab fa-git-square"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <!-- automatic navigation -->
+            <div class="auto-nav">
+              <div class="btn1-auto"></div>
+              <div class="btn2-auto"></div>
+              <div class="btn3-auto"></div>
+              <div class="btn4-auto"></div>
+            </div>
+            <!-- Manual slider -->
+            <div class="manual-nav">
+              <label for="radio1" class="btn-manual"></label>
+              <label for="radio2" class="btn-manual"></label>
+              <label for="radio3" class="btn-manual"></label>
+              <label for="radio4" class="btn-manual"></label>
+            </div>
+          </aside>
+        </aside>
+        <div class="readMe-container">
+          <a href="#2">Przejdz Dalej</a></div>
+      </article>
+
+      <!-- Experience -->
+      <div class="content-experience" id="2">
+        <section class="container-exp-h1">
+
+        </section>
+        <section class="container-skill">
+        </section>
+        <div class="container-art">
+          <article class="art article-1">
+            <h1>Doświadczenie zawodowe</h1>
+            <button>Rozwiń</button>
+          </article>
+          <article class="art article-2">
+            <h1>Wykształcenie
+            </h1>
+            <button>Rozwiń</button>
+          </article>
+        </div>
+      </div>
+      <!-- Project -->
+      <section class="container-project" id="3">
+        <h1>
+          Project
+        </h1>
+      </section>
+      <footer>
+        <form class="contact" method="get" id="4">
+          <input type="text" id="name" name="text" placeholder="Enter your Name" required>
+          <input type="email" id="email" name="emial" placeholder="Enter a valid email address" required>
+          <textarea id="mText" name="mText" placeholder="Enter your massage" required></textarea>
+          <button id="submit-btn" type="submit">Contact Me</button>
+        </form>
+        <ul>
+          <!-- logo socialmedia -->
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100003234103680"><i
+                class="fab fa-facebook-square"></i></a>
+          </li>
+          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/Piotr88-B"><i class="fab fa-github"></i></a></li>
+        </ul>
+      </footer>
+    </div>
+    <script src="app.js"></script>
   </body>
 
   </html>

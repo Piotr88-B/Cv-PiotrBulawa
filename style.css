@@ -20,25 +20,27 @@
   scroll-behavior: smooth;
 }
 
+
+
 body {
   background-size: cover;
   background-repeat: no-repeat;
   backdrop-filter: blur(3px);
+  
 }
-
-/* 1 -Page main */
-.page-container {
-  display: flex;
-  flex-direction: column;
-}
-
 /*  1- menu */
-
+header{
+  display: flex;
+  position: sticky;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border-bottom:2px solid #111930;
+}
 nav {
   display: flex;
-  position: fixed;
   justify-content: space-between;
-  z-index: 1;
   height: 60px;
   width: 100%;
   background: white;
@@ -81,6 +83,11 @@ nav .openMenu {
 nav .ul-menu .closMenu {
   display: none;
   cursor: pointer;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
 }
 
 /* 2 - About main container */
@@ -259,14 +266,12 @@ aside .fab {
 .content-experience {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   order: 2;
   align-items: center;
   min-height: 100vh;
   width: 100%;
-  margin: 0;
-  padding: 0;
   font-family: var(--fontText);
 }
 
@@ -275,16 +280,25 @@ aside .fab {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  font-family: var(--fontText);
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 20px;
+  max-width: 800px;
   order: 1;
+   margin-top: 10%;
+   margin-bottom: 5%;
   gap: 15px;
   width: 100%;
+
 }
 
 /* skill */
 .templeSkill {
   margin: 0;
-  flex-basis: 150px;
-  height: 200px;
+  order: 1;
+  flex-basis: 180px;
+  height: 260px;
   color: #141414;
   text-align: center;
   justify-content: center;
@@ -340,6 +354,7 @@ aside .fab {
 
 /* 3 */
 .container-art {
+  margin-top: 5%;
   display: flex;
   flex-wrap: wrap;
   min-width: 60%;
@@ -406,6 +421,18 @@ aside .fab {
   box-shadow: 1px 1px 1px 1px black;
 }
 
+/* Project page */
+.container-project{
+  display: flex;
+  width: 100%;
+ min-height: 100vh;
+ background-color: var(--bcboody2);
+ color: #111930;
+  order: 3;
+}
+
+
+
 /* footer */
 footer {
   display: flex;
@@ -414,9 +441,9 @@ footer {
   justify-content: center;
   order: 4;
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   margin-bottom: 50px;
-  background-color: #111930;
+  /* background-color: #111930; */
 }
 
 footer li {
@@ -492,6 +519,10 @@ footer .fab {
 }
 
 @media(max-width: 650px) {
+
+  header{
+    position: sticky;
+  }
 
   nav {
     height: 60px;
