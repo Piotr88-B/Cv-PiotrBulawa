@@ -540,6 +540,7 @@ footer .fab {
   }
 
   nav .ul-menu {
+    display: none;
     height: 100vh;
     position: absolute;
     top: 0;
@@ -550,7 +551,6 @@ footer .fab {
     justify-content: center;
     transition: top 2s ease;
     background-color: var(--bgHamburger);
-    display: none;
     color: white;
     margin-top: -15px;
   }
@@ -609,5 +609,4 @@ footer .fab {
     line-height: 2rem;
 
   }
-
 }
