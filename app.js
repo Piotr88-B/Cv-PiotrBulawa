@@ -44,13 +44,13 @@ const hiddenDiv = () => {
 
 const showFunction = () => {
   selectUlMenu.style.display = 'flex';
-  selectUlMenu.style.top = '0'
+  // selectUlMenu.style.top = '0';
 }
 const closeFunction = () => {
-  selectUlMenu.style.top = '-100%';
+ selectUlMenu.style.display ='none'
 }
 selectLink.forEach(e => e.addEventListener('click', () => {
-  selectUlMenu.style.top = '-100%';
+ selectUlMenu.style.display = 'none'
 }))
 
 // create object

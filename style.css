@@ -530,6 +530,8 @@ footer .fab {
 @media(max-width: 650px) {
 
   header {
+    display: flex;
+    flex-direction: column;
     position: sticky;
   }
 
@@ -539,7 +541,7 @@ footer .fab {
 
   nav .ul-menu {
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     left: 0;
