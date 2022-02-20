@@ -61,8 +61,8 @@ let skillObject = [{
     divBar: 'bar',
     divBox: 'box',
     name: 'html',
-    valueText: '75%',
-    value: 0.75,
+    valueText: '70%',
+    value: 0.7,
     startAngle: -1.55,
     size: 150,
     fill: {
@@ -76,8 +76,8 @@ let skillObject = [{
     divBar: 'bar',
     divBox: 'box',
     name: 'css',
-    valueText: '75%',
-    value: 0.75,
+    valueText: '60%',
+    value: 0.6,
     startAngle: -1.55,
     size: 150,
     fill: {
@@ -90,8 +90,8 @@ let skillObject = [{
     divBar: 'bar',
     divBox: 'box',
     name: 'JavaScript',
-    valueText: '60%',
-    value: 0.6,
+    valueText: '50%',
+    value: 0.5,
     startAngle: -1.55,
     size: 150,
     fill: {
@@ -160,8 +160,8 @@ let skillObject = [{
     divBar: 'bar',
     divBox: 'box',
     name: 'Język Angielski',
-    valueText: '45%',
-    value: 0.45,
+    valueText: '40%',
+    value: 0.4,
     startAngle: -1.55,
     size: 150,
     fill: {
@@ -230,6 +230,33 @@ selectFaders.forEach(fader => {
   aOnScroll.observe(fader)
 });
 
+// gallery function menu
+(function(){
+  'use strict';
+  $('ul.filters > li').on('click',function(e){
+    e.preventDefault();
+    $('ul.filters> li').removeClass('active')
+    $(this).addClass('active')
+  })
+ $('.card').mouseenter(function(){
+  $('.card-overlay').css({'top': '-100%'})
+    $('.card-hover').css({
+      'top': '0'
+    }).mouseleave(function(){
+ $('.card-overlay').css({
+   'top': '0'
+ })
+  $('.card-hover').css({
+    'top': '100%'
+  })
+
+    })
+
+
+ })
+
+
+})(jQuery);
 
 
 

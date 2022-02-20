@@ -268,18 +268,19 @@ aside .fab {
 .content-experience {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   order: 2;
+  margin-top: 15%;
   align-items: center;
   min-height: 100vh;
-  width: 100%;
   font-family: var(--fontText);
 }
 
 .container-skill {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-family: var(--fontText);
@@ -291,7 +292,6 @@ aside .fab {
   margin-top: 10%;
   gap: 15px;
   width: 100%;
-
 }
 
 /* skill */
@@ -388,7 +388,7 @@ aside .fab {
   background-image: url(./img/marten-bjork-6dW3xyQvcYE-unsplas.png);
   background-repeat: no-repeat;
   background-size: 150%;
-  order: 1;
+  order: 2;
 }
 
 .article-1 button:hover {
@@ -401,7 +401,7 @@ aside .fab {
   background-size: 150%;
   background-repeat: no-repeat;
   /* flex: 1 1 40%; */
-  order: 2;
+  order: 1;
 }
 
 .article-2 button:hover {
@@ -424,23 +424,91 @@ aside .fab {
 /* Project page */
 .container-project {
   display: flex;
+  color:white;
+  padding: 20px;
+  margin-top: 2%;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
-  background-color: var(--bcboody2);
+  height: 100vh;
+  background-color: #111930;
   align-items: center;
- 
+  border-radius: 40% 85% / 15% 20% ;
   order: 3;
 }
-.container-project-inside{
- display: flex;
-  margin-top: 5%;
- border: 2px solid red;
- width: 300px;
- height: 350px;
+ul.filters {
+  display: flex;
+  padding: 30px;
+  margin: 0;
+}
+ul.filters > li {
+  list-style: none;
+  display: inline-block;
+
+}
+ul.filters> li>a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 5px 20px;
+}
+ul.filters>li>a:hover{
+  color:#111930;
+  background: white;
+}
+ul.filters > li.active > a{
+  background: white;
+  color: #111930;
 }
 
+.card-head img{
+width: 430px;
+}
 
+.card{
+  position: relative;
+  margin-bottom: 30px;
+    max-width: 430px;
+}
+.card-head{
+  position: relative;
+  overflow: hidden;
+  
+}
+.card-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(67, 78, 94, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   -webkit-transition: ease-in-out 0.2s;
+   -moz-transition: ease-in-out 0.2s;
+   -ms-transition: ease-in-out 0.2s;
+   transition: ease-in-out 0.2s;
+}
+.card-hover{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+    background-color: rgba(67, 78, 94, 0.8);
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -ms-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
 
 /* footer */
 footer {
