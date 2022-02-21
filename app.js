@@ -231,31 +231,41 @@ selectFaders.forEach(fader => {
 });
 
 // gallery function menu
+
+
+
 (function(){
+  
   'use strict';
+ const project = document.querySelector('.project')
+ 
+// project.isotope({
+//   itemSelector: '.item',
+//   layoutMode: 'fitRows'
+// });
+
   $('ul.filters > li').on('click',function(e){
+   
     e.preventDefault();
-    $('ul.filters> li').removeClass('active')
-    $(this).addClass('active')
-  })
+
+  // let filter = $(this).attr('data-filter');
+
+    $('ul.filters> li').removeClass('active');
+    $(this).addClass('active');
+
+    // $project.isotope({filter: filter});
+
+  });
+
  $('.card').mouseenter(function(){
-  $('.card-overlay').css({'top': '-100%'})
-    $('.card-hover').css({
-      'top': '0'
-    }).mouseleave(function(){
- $('.card-overlay').css({
-   'top': '0'
- })
-  $('.card-hover').css({
-    'top': '100%'
-  })
+  $(this).find('.card-overlay').css({'top': '-100%'});
+    $(this).find('.card-hover').css({'top': '0'});
+  
+  }).mouseleave(function(){
 
-    })
-
-
- })
-
-
+ $(this).find('.card-overlay').css({'top': '0'});
+  $(this).find('.card-hover').css({'top': '100%'});
+});
 })(jQuery);
 
 
