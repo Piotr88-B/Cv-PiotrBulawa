@@ -191,9 +191,6 @@ for (let i = 0; i < skillObject.length; i++) {
 }
 const selectAllCircele = document.querySelectorAll('.circle-inside', '.bar')
 
-
-
-
 const selectFaders = document.querySelectorAll('.fade-in')
 const settup ={
 threshold: 0,
@@ -233,30 +230,31 @@ selectFaders.forEach(fader => {
 // gallery function menu
 
 
-
-(function(){
   
-  'use strict';
- const project = document.querySelector('.project')
- 
-// project.isotope({
-//   itemSelector: '.item',
-//   layoutMode: 'fitRows'
-// });
-
+  'use strict'
+  
+ let $project = $('.max-img-project')
   $('ul.filters > li').on('click',function(e){
-   
     e.preventDefault();
-
-  // let filter = $(this).attr('data-filter');
-
+ 
+  let filter = $(this).attr('data-filter');
     $('ul.filters> li').removeClass('active');
     $(this).addClass('active');
 
-    // $project.isotope({filter: filter});
+     $project.isotope({
+       itemSelector: '.item',
+     });
 
+  $project.isotope({
+    filter: filter
+  });
+   
   });
 
+
+
+
+ 
  $('.card').mouseenter(function(){
   $(this).find('.card-overlay').css({'top': '-100%'});
     $(this).find('.card-hover').css({'top': '0'});
@@ -266,7 +264,7 @@ selectFaders.forEach(fader => {
  $(this).find('.card-overlay').css({'top': '0'});
   $(this).find('.card-hover').css({'top': '100%'});
 });
-})(jQuery);
+
 
 
 

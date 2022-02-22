@@ -34,7 +34,7 @@ header {
   display: flex;
   position: sticky;
   width: 100%;
-  z-index: 1;
+  z-index: 11;
   top: 0;
   left: 0;
   border-bottom: 2px solid #111930;
@@ -271,10 +271,12 @@ aside .fab {
   justify-content: center;
   flex-wrap: wrap;
   order: 2;
-  margin-top: 15%;
   align-items: center;
   min-height: 100vh;
   font-family: var(--fontText);
+}
+.content-experience h1{
+  margin-top: 5%;
 }
 
 .container-skill {
@@ -288,8 +290,8 @@ aside .fab {
   font-weight: 700;
   font-size: 20px;
   max-width: 800px;
+  margin-top: 2%;
   order: 1;
-  margin-top: 10%;
   gap: 15px;
   width: 100%;
 }
@@ -437,15 +439,13 @@ aside .fab {
 .filters {
  align-items: center;
  justify-content: center;
-
 }
-.max-img-project {
+.item-project {
 display: flex;
 flex-wrap: wrap;
 gap: 10px;
 justify-content: center;
- max-width: 1500px;
-
+max-width: 1150px;
 }
 
 ul.filters {
@@ -503,7 +503,7 @@ width:100%;
 
 .card-overlay {
   position: absolute;
-  color: #111930;
+  color: orange;
   font-size: 20px;
   top: 0;
   left: 0;
@@ -553,7 +553,8 @@ h4.title {
 .card-btn {
   text-decoration: none;
   color: white;
-  margin-top: -10px;
+  margin-top: 10%;
+  background-color: #111930;
   font-size: 1rem;
   border: 1px solid black;
   border-radius: 3px;
@@ -565,9 +566,6 @@ h4.title {
   background-color: white;
   color: #111930;
 }
-
-
-
 
 
 
