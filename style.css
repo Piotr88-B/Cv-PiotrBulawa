@@ -436,45 +436,48 @@ aside .fab {
   border-radius: 20% 75% / 15% 2%;
   order: 3;
 }
-.filters {
- align-items: center;
- justify-content: center;
-}
-.item-project {
-display: flex;
-flex-wrap: wrap;
-gap: 10px;
-justify-content: center;
-max-width: 1150px;
-}
-
-ul.filters {
+.project-menu ul{
   display: flex;
   padding: 30px;
   margin: 0;
 }
 
-ul.filters>li {
+.project-menu>ul>li {
   list-style: none;
   display: inline-block;
 
 }
 
-ul.filters>li>a {
+.project-menu>ul>li>a {
   display: block;
   color: white;
   text-decoration: none;
   padding: 5px 20px;
 }
 
-ul.filters>li>a:hover {
+.project-menu>ul>li>a:hover {
   color: #111930;
   background: white;
 }
 
-ul.filters>li.active>a {
+.project-menu ul > li.active > a {
   background: white;
   color: #111930;
+}
+
+.item-project {
+  display: flex;
+  flex-wrap: wrap;
+justify-content: center;
+justify-items: center;
+ width: 60%;
+}
+
+.item-project .item {
+ min-width: 300px;
+  height: auto;
+  gap: 10px;
+   padding: 12px;
 }
 
 .card-head img {

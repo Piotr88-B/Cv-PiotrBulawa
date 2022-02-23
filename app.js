@@ -227,34 +227,8 @@ selectFaders.forEach(fader => {
   aOnScroll.observe(fader)
 });
 
-// gallery function menu
 
-
-  
-  'use strict'
-  
- let $project = $('.max-img-project')
-  $('ul.filters > li').on('click',function(e){
-    e.preventDefault();
- 
-  let filter = $(this).attr('data-filter');
-    $('ul.filters> li').removeClass('active');
-    $(this).addClass('active');
-
-     $project.isotope({
-       itemSelector: '.item',
-     });
-
-  $project.isotope({
-    filter: filter
-  });
-   
-  });
-
-
-
-
- 
+// open page gller-project
  $('.card').mouseenter(function(){
   $(this).find('.card-overlay').css({'top': '-100%'});
     $(this).find('.card-hover').css({'top': '0'});
@@ -264,6 +238,23 @@ selectFaders.forEach(fader => {
  $(this).find('.card-overlay').css({'top': '0'});
   $(this).find('.card-hover').css({'top': '100%'});
 });
+
+// gallery function menu
+
+
+$('.project-menu ul li').click(function(){
+
+  $('.project-menu ul li').removeClass('active');
+  $(this).addClass('active');
+   
+ let filterValue = $(this).attr('data-filter');
+ $('.item-project').isotope({
+   layoutMode:'fitRows',
+   filter: filterValue
+ });
+ return false;
+});
+
 
 
 
@@ -275,4 +266,3 @@ selectArt.addEventListener('mouseleave', hiddenDiv)
 //use function displaying the menu
 selectOpenMenu.addEventListener('click', showFunction);
 selectclosMenu.addEventListener('click', closeFunction);
-
