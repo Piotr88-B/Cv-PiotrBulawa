@@ -275,7 +275,8 @@ aside .fab {
   min-height: 100vh;
   font-family: var(--fontText);
 }
-.content-experience h1{
+
+.content-experience h1 {
   margin-top: 5%;
 }
 
@@ -436,7 +437,8 @@ aside .fab {
   border-radius: 20% 75% / 15% 2%;
   order: 3;
 }
-.project-menu ul{
+
+.project-menu ul {
   display: flex;
   padding: 30px;
   margin: 0;
@@ -460,7 +462,7 @@ aside .fab {
   background: white;
 }
 
-.project-menu ul > li.active > a {
+.project-menu ul>li.active>a {
   background: white;
   color: #111930;
 }
@@ -468,40 +470,40 @@ aside .fab {
 .item-project {
   display: flex;
   flex-wrap: wrap;
-justify-content: center;
-justify-items: center;
- width: 60%;
+  justify-content: center;
+  justify-items: center;
+  width: 60%;
 }
 
 .item-project .item {
- min-width: 300px;
-  height: auto;
-  gap: 10px;
-   padding: 12px;
+  width: 600px;
+}
+.card-head{
+ width: 100%;
+ height: 100%;
 }
 
 .card-head img {
-  width: 430px;
+  max-width: 100%;
+  height: auto;
 }
 
 .card {
   position: relative;
   margin-bottom: 30px;
-  max-width: 430px;
+  max-width: 280px;
 }
 
 .card-head {
   position: relative;
   overflow: hidden;
-  text-align:left;
+  text-align: left;
   font-size: 15px;
   letter-spacing: 1px;
 }
-.card-head h2{
+
+.card-head h2 {
   margin-bottom: 20px;
-}
-.card-head img{
-width:100%;
 }
 
 .card-overlay {
