@@ -227,7 +227,6 @@ selectFaders.forEach(fader => {
   aOnScroll.observe(fader)
 });
 
-
 // open page gller-project
  $('.card').mouseenter(function(){
   $(this).find('.card-overlay').css({'top': '-100%'});
@@ -238,6 +237,16 @@ selectFaders.forEach(fader => {
  $(this).find('.card-overlay').css({'top': '0'});
   $(this).find('.card-hover').css({'top': '100%'});
 });
+
+const skillDiv = document.getElementsByClassName('container__article')
+
+for(let i=0; i<skillDiv.length; i++){
+  skillDiv[i].addEventListener('click', function(){
+    this.classList.toggle('active')
+  })
+}
+
+
 
 // gallery function menu
 

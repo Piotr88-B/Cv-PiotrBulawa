@@ -357,71 +357,45 @@ aside .fab {
 }
 
 /* 3 */
-.container-art {
-  display: flex;
-  flex-wrap: wrap;
-  min-width: 60%;
-  order: 2;
-  gap: 10px;
-}
-
-/* 3.1 - articul page skill/school */
-.article-1,
-.article-2 {
+.containerArt {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 15px;
-  min-height: 50vh;
-  min-width: 50vh;
-  flex: 1 1 40%
-}
-
-/* 3.2 - hover img artic */
-.article-1:hover,
-.article-2:hover {
-  background-size: 160%;
-}
-
-.article-1 {
-  color: orange;
-  background-image: url(./img/marten-bjork-6dW3xyQvcYE-unsplas.png);
-  background-repeat: no-repeat;
-  background-size: 150%;
   order: 2;
 }
-
-.article-1 button:hover {
+.containerArt .container__articleJob {
+position: relative;
+}
+.containerArt .container__article .art__article1{
+  position: relative;
+  color: #111930;
   background-color: orange;
-}
-
-.article-2 {
-  color: white;
-  background-image: url(./img/1.jpg);
-  background-size: 150%;
-  background-repeat: no-repeat;
-  /* flex: 1 1 40%; */
-  order: 1;
-}
-
-.article-2 button:hover {
-  background-color: white;
-}
-
-/* button expand  */
-.art button {
-  cursor: pointer;
-  width: 100px;
-  height: 30px;
-  background: none;
-  border-radius: 30px;
-  border: none;
   padding: 10px;
-  margin-top: 20px;
-  box-shadow: 1px 1px 1px 1px black;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 30px;
+}
+.containerArt .container__article .art__article1::before {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  font-size: 40px;
+  transform: translateY(-50%);
+}
+.containerArt .container__article .art__article1Text{
+position: relative;
+height: 0;
+overflow: hidden;
+transition: 0.5s;
+overflow-y: auto;
+}
+
+.containerArt .container__article.active .art__article1Text {
+height: 200px;
+padding: 15px;
+}
+.containerArt .container__article.active .art__article1::before{
+    content: '-';
 }
 
 /* Project page */
@@ -478,20 +452,21 @@ aside .fab {
 .item-project .item {
   width: 300px;
 }
-.card-head{
- width: 100%;
- height: 100%;
+
+.card-head {
+  width: 100%;
+  height: 100%;
 }
 
 .card-head img {
   max-width: 100%;
-  height: auto;
 }
 
 .card {
   position: relative;
   margin-bottom: 30px;
-  max-width: 280px;
+  max-width: 270px;
+  max-height: 100%;
 }
 
 .card-head {
@@ -532,7 +507,7 @@ aside .fab {
   width: 100%;
   height: 100%;
   z-index: 10;
-  padding: 30px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
