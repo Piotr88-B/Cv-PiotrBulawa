@@ -23,6 +23,7 @@
 
 
 body {
+  background-color: lightcyan;
   background-size: cover;
   background-repeat: no-repeat;
   backdrop-filter: blur(3px);
@@ -362,18 +363,21 @@ aside .fab {
   flex-direction: column;
   order: 2;
 }
+
 .containerArt .container__articleJob {
-position: relative;
+  position: relative;
 }
-.containerArt .container__article .art__article1{
+
+.containerArt .container__article .art__article1 {
   position: relative;
   color: #111930;
-  background-color: orange;
+  background-color: lightgray;
   padding: 10px;
   margin: 10px;
   cursor: pointer;
   font-size: 30px;
 }
+
 .containerArt .container__article .art__article1::before {
   content: '+';
   position: absolute;
@@ -382,20 +386,24 @@ position: relative;
   font-size: 40px;
   transform: translateY(-50%);
 }
-.containerArt .container__article .art__article1Text{
-position: relative;
-height: 0;
-overflow: hidden;
-transition: 0.5s;
-overflow-y: auto;
+
+.containerArt .container__article .art__article1Text {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: auto;
+  font-size: medium;
+
 }
 
 .containerArt .container__article.active .art__article1Text {
-height: 200px;
-padding: 15px;
+  min-height: 400px;
+  padding: 15px;
 }
-.containerArt .container__article.active .art__article1::before{
-    content: '-';
+
+.containerArt .container__article.active .art__article1::before {
+  content: '-';
 }
 
 /* Project page */
