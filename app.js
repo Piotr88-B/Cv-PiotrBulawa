@@ -197,7 +197,6 @@ threshold: 0,
 rootMargin: "0px 0px -50px 0px"
 }
 
-
 const functionScrol = () => {
   for (let i = 0; i < skillObject.length; i++) {
     $(selectAllCircele[i]).circleProgress(skillObject[i]).on('circle-animation-progress',
@@ -246,10 +245,7 @@ for(let i=0; i<skillDiv.length; i++){
   })
 }
 
-
-
 // gallery function menu
-
 
 $('.project-menu ul li').click(function(){
 
@@ -263,6 +259,8 @@ $('.project-menu ul li').click(function(){
  });
  return false;
 });
+
+// send email
 
 
 

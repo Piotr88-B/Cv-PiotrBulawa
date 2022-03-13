@@ -371,7 +371,7 @@ aside .fab {
 .containerArt .container__article .art__article1 {
   position: relative;
   color: #111930;
-  background-color: lightgray;
+  background-color: #C9E5E5;
   padding: 10px;
   margin: 10px;
   cursor: pointer;
@@ -498,7 +498,6 @@ aside .fab {
   width: 100%;
   height: 100%;
   z-index: 9;
-  /* background-color: rgba(67, 78, 94, 0.8); */
   display: flex;
   align-items: center;
   justify-content: center;
