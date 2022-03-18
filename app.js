@@ -44,13 +44,13 @@ const hiddenDiv = () => {
 
 const showFunction = () => {
   selectUlMenu.style.display = 'flex';
-  
+
 }
 const closeFunction = () => {
- selectUlMenu.style ='none'
+  selectUlMenu.style = 'none'
 }
 selectLink.forEach(e => e.addEventListener('click', () => {
-selectUlMenu.style = 'none'
+  selectUlMenu.style = 'none'
 }))
 
 // create object
@@ -192,9 +192,9 @@ for (let i = 0; i < skillObject.length; i++) {
 const selectAllCircele = document.querySelectorAll('.circle-inside', '.bar')
 
 const selectFaders = document.querySelectorAll('.fade-in')
-const settup ={
-threshold: 0,
-rootMargin: "0px 0px -50px 0px"
+const settup = {
+  threshold: 0,
+  rootMargin: "0px 0px -50px 0px"
 }
 
 const functionScrol = () => {
@@ -206,70 +206,98 @@ const functionScrol = () => {
   }
 }
 
-const aOnScroll = new IntersectionObserver(function(
-  entries,
-  aOnScroll
-){
-  entries.forEach(entry =>{
-    if(!entry.isIntersecting){
-      return;
-    }else{
-   entry.target.classList.add('appear');
-      aOnScroll.unobserve(entry.target)
-      functionScrol()
-    }
-  })
-}, 
-settup);
+const aOnScroll = new IntersectionObserver(function (
+    entries,
+    aOnScroll
+  ) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        return;
+      } else {
+        entry.target.classList.add('appear');
+        aOnScroll.unobserve(entry.target)
+        functionScrol()
+      }
+    })
+  },
+  settup);
 
 selectFaders.forEach(fader => {
   aOnScroll.observe(fader)
 });
 
 // open page gller-project
- $('.card').mouseenter(function(){
-  $(this).find('.card-overlay').css({'top': '-100%'});
-    $(this).find('.card-hover').css({'top': '0'});
-  
-  }).mouseleave(function(){
+$('.card').mouseenter(function () {
+  $(this).find('.card-overlay').css({
+    'top': '-100%'
+  });
+  $(this).find('.card-hover').css({
+    'top': '0'
+  });
 
- $(this).find('.card-overlay').css({'top': '0'});
-  $(this).find('.card-hover').css({'top': '100%'});
+}).mouseleave(function () {
+
+  $(this).find('.card-overlay').css({
+    'top': '0'
+  });
+  $(this).find('.card-hover').css({
+    'top': '100%'
+  });
 });
+
+//use function
+//use function change div
+
+
 
 const skillDiv = document.getElementsByClassName('container__article')
 
-for(let i=0; i<skillDiv.length; i++){
-  skillDiv[i].addEventListener('click', function(){
+for (let i = 0; i < skillDiv.length; i++) {
+  skillDiv[i].addEventListener('click', function () {
     this.classList.toggle('active')
   })
 }
 
 // gallery function menu
 
-$('.project-menu ul li').click(function(){
+$('.project-menu ul li').click(function () {
 
   $('.project-menu ul li').removeClass('active');
   $(this).addClass('active');
-   
- let filterValue = $(this).attr('data-filter');
- $('.item-project').isotope({
-   layoutMode:'fitRows',
-   filter: filterValue
- });
- return false;
+
+  let filterValue = $(this).attr('data-filter');
+  $('.item-project').isotope({
+    layoutMode: 'fitRows',
+    filter: filterValue
+  });
+  return false;
 });
 
 // send email
+// const contactMail = document.querySelector('.contact')
 
+// function sendEmail(e) {
+//   e.preventDefault()
+//   const nameM = document.querySelector('.name'),
+//     email = document.querySelector('.email'),
+//     msg = document.querySelector('.mText')
 
+//   /function
 
-
-
-//use function
-//use function change div
-selectArt.addEventListener('mouseenter', showDiv)
-selectArt.addEventListener('mouseleave', hiddenDiv)
+//   Email.send({
+//     SecureToken: "d1bb4a1a-efd2-4196-81e4-bf63983e2fb4",
+//     To: 'piotrbulawa88@gmail.com',
+//     From: email.value,
+//     Subject: "This is the subject",
+//     Body: msg.value
+//   }).then(
+//     message => alert(message)
+//   );
+// }
+// document.querySelector('.submit-btn').addEventListener('click', sendEmail)
 //use function displaying the menu
 selectOpenMenu.addEventListener('click', showFunction);
 selectclosMenu.addEventListener('click', closeFunction);
+selectArt.addEventListener('mouseenter', showDiv)
+selectArt.addEventListener('mouseleave', hiddenDiv)
+

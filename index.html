@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap"
       rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/b45334ba2c.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
@@ -200,11 +200,11 @@
       </div>
     </section>
     <footer>
-      <form class="contact" method="get" id="4">
-        <input type="text" id="name" name="text" placeholder="Enter your Name" required>
-        <input type="email" id="email" name="emial" placeholder="Enter a valid email address" required>
-        <textarea id="mText" name="mText" placeholder="Enter your massage" required></textarea>
-        <button id="submit-btn" type="submit">Contact Me</button>
+      <form class="contact" method="get" id="4" onsubmit="sendEmail(); reset();">
+        <input type="text" class="name" name="text" placeholder="Enter your Name" required>
+        <input type="email" class="email" name="emial" placeholder="Enter a valid email address" required>
+        <textarea class="mText" name="mText" placeholder="Enter your massage" required></textarea>
+        <button class="submit-btn" type="submit">Contact Me</button>
       </form>
       <ul>
         <!-- logo socialmedia -->
@@ -218,6 +218,7 @@
     </div>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script src="app.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   </body>
 
