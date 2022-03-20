@@ -44,7 +44,7 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
-  height: 58px;
+  height: 61px;
   width: 100%;
   background: white;
 }
@@ -165,7 +165,7 @@ nav .ul-menu .closMenu {
 aside .fab {
   margin: 15px;
   width: auto;
-  transition: 2s;
+  transition: 1s;
   font-size: 150px;
 }
 
@@ -180,7 +180,7 @@ aside .fab {
 .btn-manual {
   padding: 5px;
   cursor: pointer;
-  transition: 1s;
+  /* transition: 1s; */
   border-radius: 50%;
   border: 1px solid white
 }
@@ -591,6 +591,7 @@ footer .fab {
 .fa-instagram:hover {
   transform: translateY(-3px);
   background: radial-gradient(circle at 20% 10%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -649,6 +650,7 @@ footer .fab {
     flex-direction: column;
     position: sticky;
     z-index: 11;
+
   }
 
   nav {
@@ -669,6 +671,7 @@ footer .fab {
     background-color: var(--bgHamburger);
     color: white;
     margin-top: -15px;
+
   }
 
   nav .ul-menu .closMenu {

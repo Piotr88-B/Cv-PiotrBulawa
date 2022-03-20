@@ -26,7 +26,7 @@ setInterval(function () {
   if (chan > 4) {
     chan = 1;
   }
-}, 4000);
+}, 2000);
 
 // function change div article
 
@@ -273,31 +273,16 @@ $('.project-menu ul li').click(function () {
   return false;
 });
 
-// send email
-// const contactMail = document.querySelector('.contact')
 
-// function sendEmail(e) {
-//   e.preventDefault()
-//   const nameM = document.querySelector('.name'),
-//     email = document.querySelector('.email'),
-//     msg = document.querySelector('.mText')
 
-//   /function
-
-//   Email.send({
-//     SecureToken: "d1bb4a1a-efd2-4196-81e4-bf63983e2fb4",
-//     To: 'piotrbulawa88@gmail.com',
-//     From: email.value,
-//     Subject: "This is the subject",
-//     Body: msg.value
-//   }).then(
-//     message => alert(message)
-//   );
-// }
-// document.querySelector('.submit-btn').addEventListener('click', sendEmail)
-//use function displaying the menu
 selectOpenMenu.addEventListener('click', showFunction);
 selectclosMenu.addEventListener('click', closeFunction);
 selectArt.addEventListener('mouseenter', showDiv)
 selectArt.addEventListener('mouseleave', hiddenDiv)
 
+const email = document.querySelector('.email')
+
+
+function sendEmail() {
+ alert("wysłano");
+}

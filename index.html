@@ -200,11 +200,11 @@
       </div>
     </section>
     <footer>
-      <form class="contact" method="get" id="4" onsubmit="sendEmail(); reset();">
+      <form class="contact" method="post" id="4" action="https://formsubmit.co/piotrbulawa88@gmail.com">
         <input type="text" class="name" name="text" placeholder="Enter your Name" required>
         <input type="email" class="email" name="emial" placeholder="Enter a valid email address" required>
         <textarea class="mText" name="mText" placeholder="Enter your massage" required></textarea>
-        <button class="submit-btn" type="submit">Contact Me</button>
+        <button class="submit-btn" type="submit" onclick="sendEmail()">Contact Me</button>
       </form>
       <ul>
         <!-- logo socialmedia -->
