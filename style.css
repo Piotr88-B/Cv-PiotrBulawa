@@ -640,7 +640,14 @@ footer .fab {
   width: 150px;
   height: 30px;
   text-align: center;
-  background-color: yellow;
+  border: 1px solid #111930;
+  color: white;
+  background-color: #111930;
+  border-radius: 10px;
+}
+.submit-btn:hover{
+  color: #111930;
+  background-color: white;
 }
 
 @media(max-width: 650px) {
