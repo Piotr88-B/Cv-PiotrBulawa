@@ -625,6 +625,7 @@ footer .fab {
   width: 250px;
   height: 20px;
   padding-left: 5px;
+  border-bottom: 1px solid #111930;
 }
 
 .mText {
@@ -650,14 +651,13 @@ footer .fab {
   background-color: white;
 }
 
-@media(max-width: 650px) {
+@media(max-width: 750px) {
 
   header {
     display: flex;
     flex-direction: column;
     position: sticky;
     z-index: 11;
-
   }
 
   nav {
@@ -678,7 +678,6 @@ footer .fab {
     background-color: var(--bgHamburger);
     color: white;
     margin-top: -15px;
-
   }
 
   nav .ul-menu .closMenu {
@@ -692,8 +691,7 @@ footer .fab {
   nav .openMenu {
     display: block;
     font-size: 50px;
-    padding: 5px;
-    margin: 0;
+    margin-top: -5px;
   }
 
   nav .ul-menu li a {
@@ -717,8 +715,9 @@ footer .fab {
     margin-bottom: 20px;
   }
 
-  .About p {
-    font-size: 12px;
+  .about-text p {
+    font-size: 15px;
+    text-align: justify;
   }
 
   .slider {
@@ -731,5 +730,16 @@ footer .fab {
     font-size: 13px;
     line-height: 2rem;
 
+  }
+  .readMe-container {
+    margin-top: -140px;
+  }
+
+  .contact__icon{
+   display: flex;
+   margin: 0;
+  }
+  .contact{
+    margin-top: -320px;
   }
 }
